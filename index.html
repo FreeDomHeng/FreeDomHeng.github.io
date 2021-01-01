@@ -20,15 +20,6 @@
   <link rel="stylesheet" href="https://at.alicdn.com/t/font_1911880_c1nvbyezg17.css">
   <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   
-    <script>
-        var themeModelId = '';
-        if (themeModelId) {
-            localStorage.setItem('modelId', themeModelId);
-        }
-    </script>
-    
-    <script src="https://cdn.jsdelivr.net/gh/yuang01/live2d-widget@latest/autoload.js"></script>
-  
   
 <link rel="stylesheet" href="/css/animate.min.css">
 
@@ -661,6 +652,16 @@
 
 
 <!-- 雪花和花瓣特效 -->
+
+  
+    <script type="text/javascript">
+      //只在桌面版网页启用特效
+      var windowWidth = $(window).width();
+      if (windowWidth > 768) {
+          document.write('<script type="text/javascript" src="/js/snow.js"><\/script>');
+      }
+    </script>
+  
 
 
   
