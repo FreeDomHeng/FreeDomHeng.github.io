@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>JS闭包 | freedom</title>
+  <title>分类: JavaScript | freedom</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -201,188 +201,63 @@
     <main class="main" style="margin-top: 60px;">
       
 
-
-<div class="post-detail-header lazyload" data-original="/medias/2.jpg" style="background: no-repeat; background-size: cover; 
-  background-position: center center;">
-  
-    <span class="title">JS闭包</span>
-  
+<div class="lazyload" data-original="/medias/categoryDetail.jpg" style="width: 100%;height: 50vh;overflow: hidden;background-size: cover; 
+background-position: center center;">
 </div>
-<div class="row justify-center">
-  <div class="main-content">
-    <article class="post post-detail">
-      
-      
-      <div class="post-meta">
-        <i class="fa fa-clock-o" aria-hidden="true"></i>
-        <span class="post-time">2021-01-02</span>
-      </div>
-      
-      <div class="post-tags-categories">
-        
-        
-        <div class="categories">
-          <i class="iconfont iconbookmark1"></i>
-          
-            <a href="/categories/JavaScript/" class="">
-              JavaScript
-            </a>
-          
-        </div>
-        
-      </div>
-      <div class="post-content">
-        <h1 id="js闭包"><a href="#js闭包" class="headerlink" title="js闭包"></a>js闭包</h1><p><a name="Is6u0"></a></p>
-<h1 id="开头简述"><a href="#开头简述" class="headerlink" title="开头简述"></a>开头简述</h1><p>学了JavaScript函数的作用域我们可以清楚的知道，在函数内部可以访问与其同属一个作用域链的外部函数的变量，以及可以访问全局变量。那么，我们如何从函数外部来访问函数内部中的变量呢？显然，常规办法无法实现。那么就引入了闭包这个概念。闭包可以实现从函数外部来访问函数内部中的变量。<br><a name="qCzwu"></a></p>
-<h1 id="js闭包详解"><a href="#js闭包详解" class="headerlink" title="js闭包详解"></a>js闭包详解</h1><p>本篇对js闭包的理解要从一个详细的例子开始，如下所示：<br /></p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  <span class="token keyword">var</span> count <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">function</span> <span class="token function">displayAlert</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//闭包</span>
-    count <span class="token operator">++</span><span class="token punctuation">;</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span>count<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-  <span class="token keyword">return</span> displayAlert<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-<span class="token keyword">var</span> s <span class="token operator">=</span> <span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">s</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">s</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token comment" spellcheck="true">//执行结果是依次提示101和102</span>
-
-<span class="token comment" spellcheck="true">//防止内存泄露</span>
-s <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span></code></pre>
-<p><a name="lflEP"></a></p>
-<h2 id="闭包的概念"><a href="#闭包的概念" class="headerlink" title="闭包的概念"></a>闭包的概念</h2><p>所谓闭包，就是在函数内部定义一个函数，通俗的来讲也就是函数内部的函数。也就是上面代码块中所指的函数displayAlert。<br><a name="opL22"></a></p>
-<h2 id="闭包的原理"><a href="#闭包的原理" class="headerlink" title="闭包的原理"></a>闭包的原理</h2><p>闭包的作用就是要从函数外部来访问函数内部的变量。常规办法无法实现，那么，闭包就根据作用域的传统作用规律来实现。<br /><strong>具体原理步骤如下：</strong><br />1.在JavaScript语言中，一个函数，其内部的子函数能访问其变量。如上面代码所示，函数displayAlert可以访问函数add中的变量count。<br />2.如上面代码所示，通过执行函数add来把函数displayAlert作为返回值返回出去，然后赋值给变量s，这时变量s就是函数displayAlert。变量s和函数displayAlert属于同一个作用域，就可以访问add函数中的变量count的值。<br />通过以上两个步骤，就能实现在函数外边来访问函数内部的变量。<br><a name="f5mw9"></a></p>
-<h2 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h2><p>闭包的作用分为两个：函数外部访问函数内部的变量、让函数内部的变量始终保存在内存中，不随函数的执行完毕而销毁。<br /></p>
-<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">function</span> <span class="token function">s1</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-  <span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token number">100</span><span class="token punctuation">;</span>
-  num <span class="token operator">=</span> <span class="token keyword">function</span> <span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span> n <span class="token operator">+</span><span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//让变量n自加，同时num属于全局变量</span>
-
-  <span class="token keyword">function</span> <span class="token function">s2</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
-    <span class="token function">alert</span><span class="token punctuation">(</span>n<span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-  <span class="token keyword">return</span> s2<span class="token punctuation">;</span>
-<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
-
-<span class="token keyword">var</span> add <span class="token operator">=</span> <span class="token function">s1</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-<span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//第一次执行add 变量n = 100</span>
-<span class="token function">num</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//执行num让n加一</span>
-<span class="token function">add</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//第二次执行add 变量 n = 101</span></code></pre>
-<p>根据上面代码块可以证明，闭包可以让函数内部的变量始终存在于内存中。<br />在第一次执行函数add的时候，变量n初始化为100，函数执行完毕之后，按照常规，变量n就会被销毁。但是，执行函数num之后再执行函数add。发现变量n变为101。这证明变量n并没有被销毁。一直存在于内存中。<br><a name="AZdIk"></a></p>
-<h2 id="使用闭包时应注意"><a href="#使用闭包时应注意" class="headerlink" title="使用闭包时应注意"></a>使用闭包时应注意</h2><p>因为闭包可以让变量一直存在于内存中，所以很容易导致内存泄露，然后严重影响浏览器的性能。所以要在退出函数之前，把用不到的变量从内存中删除。<br /><br><br /><br><br /></p>
-
-      </div>
-      
-        <div class="copyright">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-    <strong>作者:  </strong>freedom</a>
-    </li>
-    <li class="post-copyright-link">
-    <strong>文章链接:  </strong>
-    <a href="/2021/01/02/JS/" target="_blank" title="JS闭包">https://freedomheng.github.io/2021/01/02/JS/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明:   </strong>
-      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
-      许可协议。转载请注明出处!
-    </li>
-  </ul>
-<div>
-      
-    </article>
-    <!-- 上一篇文章和下一篇文章 -->
-    
-      <div class="post-nav">
-
-
-
-</div>
-
-    
-    
-
-    <!-- 打赏 -->
-    
-
-    <!-- 分享 -->
-    
-
-    <!-- 评论 -->
-      
-        <div id="myComment">
-          
-        </div>
-      
+<div class="category">
+  <div class="category-name">
+    <div class="name" style="background-color: #85C1E9;">JavaScript 分类</div>
   </div>
+  <section class="posts">
+    
+    <article class="post" data-aos="fade-up"
+      style="flex-direction: row-reverse;">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-01-02</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/01/02/JS/">JS闭包</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              
+            </div>
+            <div class="post-categories">
+              
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+</div>
 
-  
-    <div class="toc-aside">
-      <div class="toc-main">
-        <div class="toc-aside-title">
-          <i class="fa fa-list-ul" aria-hidden="true"></i><span>目录</span>
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            <a href="/2021/01/02/JS/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+              background-position: center center;">
+            </a>
+          </div>
+          <div class="post-content">
+            js闭包
+开头简述学了JavaScript函数的作用域我们可以清楚的知道，在函数内部可以访问与其同属一个作用域链的外部函数的变量，以及可以访问全局变量。那么，我们如何从函数外部来访问函数内部中的变量呢？显然，常规办法无法实现。那么就引入了闭
+          </div>
         </div>
-        <div class="toc-content">
-          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
-<script src="/js/tocbot/tocbot.min.js"></script>
-<div class="toc"></div>
-
-<script>
-  if ($('.toc').length > 0) {
-    var headerEl = 'h2, h3, h4',  //headers 
-      content = '.post-detail',//文章容器
-      idArr = {};  //标题数组以确定是否增加索引id
-      //add #id
-
-    $(content).children(headerEl).each(function () {
-      //去除空格以及多余标点
-      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
-
-      headerId = headerId.toLowerCase();
-      if (idArr[headerId]) {
-        //id已经存在
-        $(this).attr('id', headerId + '-' + idArr[headerId]);
-        idArr[headerId]++;
-      }
-      else {
-        //id未存在
-        idArr[headerId] = 1;
-        $(this).attr('id', headerId);
-      }
-    });
-
-    tocbot.init({
-      // Where to render the table of contents.
-      tocSelector: '.toc',
-      // Where to grab the headings to build the table of contents.
-      contentSelector: content,
-      // Which headings to grab inside of the contentSelector element.
-      headingSelector: headerEl,
-      scrollSmooth: true,
-      scrollSmoothOffset: -80,
-      headingsOffset: 130,
-      positionFixedSelector: '.toc-main',
-      positionFixedClass: 'is-position-fixed',
-      fixedSidebarOffset: 'auto',
-    });
-  }
-
-</script>
-
-<style>
-.is-position-fixed {
-  position:fixed !important;
-  top: 64px;
-}
-
-</style>
+        <div class="post-more">
+          <a href="/2021/01/02/JS/">
+            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
+          </a>
         </div>
       </div>
-    </div>
-  
+      <div class="post-img">
+        <a href="/2021/01/02/JS/" style="background: url('https://ssyerv1.oss-cn-hangzhou.aliyuncs.com/picture/56d7b34ee52046a3af719a1c9b1e0753.jpg!sswm');background-size: cover; 
+          background-position: center center;">
+        </a>
+      </div>
+    </article>
+    
+  </section>
 </div>
 
     </main>
