@@ -248,8 +248,7 @@
 
 <span class="token comment" spellcheck="true">//防止内存泄露</span>
 s <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span></code></pre>
-<h2 id=""><a href="#" class="headerlink" title=""></a><a name="lflEP"></a></h2><p>title: JS闭包<br>date: 2021-01-02 21:18</p>
-<hr>
+<p><a name="lflEP"></a></p>
 <h2 id="闭包的概念"><a href="#闭包的概念" class="headerlink" title="闭包的概念"></a>闭包的概念</h2><p>所谓闭包，就是在函数内部定义一个函数，通俗的来讲也就是函数内部的函数。也就是上面代码块中所指的函数displayAlert。<br><a name="opL22"></a></p>
 <h2 id="闭包的原理"><a href="#闭包的原理" class="headerlink" title="闭包的原理"></a>闭包的原理</h2><p>闭包的作用就是要从函数外部来访问函数内部的变量。常规办法无法实现，那么，闭包就根据作用域的传统作用规律来实现。<br /><strong>具体原理步骤如下：</strong><br />1.在JavaScript语言中，一个函数，其内部的子函数能访问其变量。如上面代码所示，函数displayAlert可以访问函数add中的变量count。<br />2.如上面代码所示，通过执行函数add来把函数displayAlert作为返回值返回出去，然后赋值给变量s，这时变量s就是函数displayAlert。变量s和函数displayAlert属于同一个作用域，就可以访问add函数中的变量count的值。<br />通过以上两个步骤，就能实现在函数外边来访问函数内部的变量。<br><a name="f5mw9"></a></p>
 <h2 id="闭包的作用"><a href="#闭包的作用" class="headerlink" title="闭包的作用"></a>闭包的作用</h2><p>闭包的作用分为两个：函数外部访问函数内部的变量、让函数内部的变量始终保存在内存中，不随函数的执行完毕而销毁。<br /></p>
