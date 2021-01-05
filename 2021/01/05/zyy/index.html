@@ -10,7 +10,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>归档: 2021/1 | freedom</title>
+  <title>JS作用域 | freedom</title>
   
     
 <link rel="stylesheet" href="/js/aos/aos.css">
@@ -199,35 +199,191 @@
   <a target="_blank" rel="noopener" href="https://github.com/yuang01/hexo-theme-bamboo" class="github-corner color-primary" aria-label="View source on GitHub"><svg width="60" height="60" viewBox="0 0 250 250" style="fill:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 </header>
     <main class="main" style="margin-top: 60px;">
-      <div class="lazyload" data-original="/medias/archive.jpg" style="width: 100%;height: 50vh;overflow: hidden;background-size: cover; 
-background-position: center center;">
+      
+
+
+<div class="post-detail-header lazyload" data-original="/medias/1.jpg" style="background: no-repeat; background-size: cover; 
+  background-position: center center;">
+  
+    <span class="title">JS作用域</span>
+  
 </div>
-<section class="archive">
-  <div class="archive-content">
-    <ul class="post-archive">
+<div class="row justify-center">
+  <div class="main-content">
+    <article class="post post-detail">
       
       
+      <div class="post-meta">
+        <i class="fa fa-clock-o" aria-hidden="true"></i>
+        <span class="post-time">2021-01-05</span>
+      </div>
+      
+      <div class="post-tags-categories">
         
+        
+        <div class="categories">
+          <i class="iconfont iconbookmark1"></i>
           
-          <div class="year" data-aos="zoom-in-up">
-              <div class="bullet"></div>
-              <a href="/archives/2021">2021</a>
-          </div>
+            <a href="/categories/JavaScript/" class="">
+              JavaScript
+            </a>
+          
+        </div>
         
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">01-05</span>
-          <a class="post-title" href="/2021/01/05/zyy/">JS作用域</a>
-        </li>
+      </div>
+      <div class="post-content">
+        <h1 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h1><p><a name="0VRAs"></a></p>
+<h1 id="定义"><a href="#定义" class="headerlink" title="定义"></a>定义</h1><p>作用域的定义：<br />一段程序代码中所用到的变量并不总是可用的，而限定这个变量的可用性的代码范围就是这个变量的作用域。通俗的讲，程序的作用域决定了一个变量在哪个地方能用，在哪个地方不能用。<br><a name="hE0q4"></a></p>
+<h1 id="具体讲述"><a href="#具体讲述" class="headerlink" title="具体讲述"></a>具体讲述</h1><p>关于作用域，我们就一个具体的函数来讲述。<br /></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> m <span class="token operator">=</span> <span class="token string">"你好"</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">hello</span><span class="token punctuation">(</span>a<span class="token punctuation">,</span>b<span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> name <span class="token operator">=</span> <span class="token string">"hello"</span><span class="token punctuation">;</span>
+  <span class="token keyword">function</span> <span class="token function">world</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+    <span class="token keyword">var</span> n <span class="token operator">=</span> <span class="token string">"world"</span><span class="token punctuation">;</span>
+  <span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<p>对于一个函数来说，作用域无非就是它所能访问变量的范围。就上面这个函数来说。函数hello所能访问或者使用的变量就是变量m、变量name、变量n以及函数的参数a、b。<br /><strong>简化总结为：</strong><br />一个函数所能访问的变量范围就是：函数的参数、函数内的局部变量、父函数作用域的变量以及全局变量。<br /><br><br /><strong>注意：</strong>在函数hello外不能访问或使用该函数内部定义的变量。<br><a name="BV9oX"></a></p>
+<h1 id="全局作用域和局部作用域"><a href="#全局作用域和局部作用域" class="headerlink" title="全局作用域和局部作用域"></a>全局作用域和局部作用域</h1><p><a name="Bjj50"></a></p>
+<h3 id="全局作用域"><a href="#全局作用域" class="headerlink" title="全局作用域"></a>全局作用域</h3><p>当浏览器打开页面时，会形成一个供代码执行的运行环境，这个运行环境就是全局作用域。<br><a name="bh7gJ"></a></p>
+<h3 id="局部作用域"><a href="#局部作用域" class="headerlink" title="局部作用域"></a>局部作用域</h3><p>定义在函数中的变量，只能在该函数中访问，该函数外不可访问。<br><a name="PUjF7"></a></p>
+<h1 id="变量阴影"><a href="#变量阴影" class="headerlink" title="变量阴影"></a>变量阴影</h1><p>当某个函数中定义的变量与该函数外变量的名称相同时，函数执行的过程中会暂时用该函数局部作用域中的变量值代替局部作用域外的变量值。例子如下：<br /></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span>
+<span class="token keyword">function</span> <span class="token function">obj</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>
+  <span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">20</span><span class="token punctuation">;</span>
+  console<span class="token punctuation">.</span><span class="token function">log</span><span class="token punctuation">(</span>num<span class="token punctuation">)</span>
+<span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span>
+<span class="token function">obj</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+<p>当此函数执行时，打印的num值是20而不是10。<br /></p>
+<p><a name="8Qhga"></a></p>
+<h1 id="变量的生命周期"><a href="#变量的生命周期" class="headerlink" title="变量的生命周期"></a>变量的生命周期</h1><p><a name="vNy4X"></a></p>
+<h3 id="变量的分类"><a href="#变量的分类" class="headerlink" title="变量的分类"></a>变量的分类</h3><p><a name="32znz"></a></p>
+<h4 id="全局变量"><a href="#全局变量" class="headerlink" title="全局变量"></a>全局变量</h4><p>在此理解为全局变量就是在所有函数外定义的变量。其生命周期在它被声明时初始化，在页面关闭后销毁。<br /><strong>注意：</strong><br />在定义变量的时候，如果变量名前面没有加var，则表明该变量是全局变量。无论该变量在什么地方定义。<br><a name="NQnol"></a></p>
+<h4 id="局部变量"><a href="#局部变量" class="headerlink" title="局部变量"></a>局部变量</h4><p>在某个函数内定义的变量，只能在函数内部访问。其生命周期在它被声明时初始化，在该函数执行完毕后销毁。<br><a name="8IU2m"></a></p>
+<h1 id="作用域链"><a href="#作用域链" class="headerlink" title="作用域链"></a>作用域链</h1><p>在函数嵌套中，这些函数会形成一个作用域链，而在最内部函数执行时搜索变量的时候，会先从最内部的函数本身搜索该变量，如果在该函数中不存在该变量，就会向该函数的上一级作用域中搜索，逐级递增，最后到全局作用域，如果全局作用域中搜索不到，就会报错：该变量未定义。<br><a name="U1yt3"></a></p>
+<h1 id="JavaScript在浏览器中的运行环境"><a href="#JavaScript在浏览器中的运行环境" class="headerlink" title="JavaScript在浏览器中的运行环境"></a>JavaScript在浏览器中的运行环境</h1><p>当浏览器打开一个页面时，会形成一个可供代码执行的运行环境，也会形成两个虚拟的内存。分别是栈内存和堆内存。<br /><strong>栈内存：</strong><br />提供代码运行环境，存储基本的数据类型值。存储的内容如下所示：<br /></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> num <span class="token operator">=</span> <span class="token number">10</span><span class="token punctuation">;</span></code></pre>
+<p><br /><strong>堆内存</strong><br />存储引用数据类型值。存储过程如下：<br /></p>
+<pre class=" language-javascript"><code class="language-javascript"><span class="token keyword">var</span> s <span class="token operator">=</span> <span class="token operator">&amp;</span>#<span class="token number">123</span><span class="token punctuation">;</span>a<span class="token punctuation">:</span><span class="token number">1</span><span class="token operator">&amp;</span>#<span class="token number">125</span><span class="token punctuation">;</span></code></pre>
+<p>在堆内存中开辟一个空间存放键值对，而这个空间对应一个地址，把这个十六进制的地址给存放在栈内存中的变量s。就达到了上述变量s在浏览器中的运行过程。</p>
+
+      </div>
       
-        
-        <li class="post-item" data-aos="fade-left">
-          <span class="post-date">01-02</span>
-          <a class="post-title" href="/2021/01/02/JS/">JS闭包</a>
-        </li>
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>freedom</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2021/01/05/zyy/" target="_blank" title="JS作用域">https://freedomheng.github.io/2021/01/05/zyy/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      本网站所有文章除特别声明外,均采用 <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">CC BY-NC-ND 4.0</a>
+      许可协议。转载请注明出处!
+    </li>
+  </ul>
+<div>
       
-    </ul>
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <div class="post-nav">
+
+
+
+  <div class="post-nav-next post-nav-item">
+    <a href="/2021/01/02/JS/">
+      <span>
+        下一篇:    JS闭包 
+      </span>
+    </a>
   </div>
-</section>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+
+    <!-- 评论 -->
+      
+        <div id="myComment">
+          
+        </div>
+      
+  </div>
+
+  
+    <div class="toc-aside">
+      <div class="toc-main">
+        <div class="toc-aside-title">
+          <i class="fa fa-list-ul" aria-hidden="true"></i><span>目录</span>
+        </div>
+        <div class="toc-content">
+          <link href="/js/tocbot/tocbot.css" rel="stylesheet">
+<script src="/js/tocbot/tocbot.min.js"></script>
+<div class="toc"></div>
+
+<script>
+  if ($('.toc').length > 0) {
+    var headerEl = 'h2, h3, h4',  //headers 
+      content = '.post-detail',//文章容器
+      idArr = {};  //标题数组以确定是否增加索引id
+      //add #id
+
+    $(content).children(headerEl).each(function () {
+      //去除空格以及多余标点
+      var headerId = $(this).text().replace(/[\s|\~|`|\!|\@|\#|\$|\%|\^|\&|\*|\(|\)|\_|\+|\=|\||\|\[|\]|\{|\}|\;|\:|\"|\'|\,|\<|\.|\>|\/|\?|\：|\，|\。]/g, '');
+
+      headerId = headerId.toLowerCase();
+      if (idArr[headerId]) {
+        //id已经存在
+        $(this).attr('id', headerId + '-' + idArr[headerId]);
+        idArr[headerId]++;
+      }
+      else {
+        //id未存在
+        idArr[headerId] = 1;
+        $(this).attr('id', headerId);
+      }
+    });
+
+    tocbot.init({
+      // Where to render the table of contents.
+      tocSelector: '.toc',
+      // Where to grab the headings to build the table of contents.
+      contentSelector: content,
+      // Which headings to grab inside of the contentSelector element.
+      headingSelector: headerEl,
+      scrollSmooth: true,
+      scrollSmoothOffset: -80,
+      headingsOffset: 130,
+      positionFixedSelector: '.toc-main',
+      positionFixedClass: 'is-position-fixed',
+      fixedSidebarOffset: 'auto',
+    });
+  }
+
+</script>
+
+<style>
+.is-position-fixed {
+  position:fixed !important;
+  top: 64px;
+}
+
+</style>
+        </div>
+      </div>
+    </div>
+  
+</div>
 
     </main>
     <div class="footer bg-color">

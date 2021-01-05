@@ -204,14 +204,40 @@
 
 
 
-<div class="swiper-length" style="display: none;">1</div>
+<div class="swiper-length" style="display: none;">2</div>
 <div id="appSwiper"
-  class="swiper-no-swiping"
+  class=""
   @mouseenter="stopAutoPlay()" 
   @mouseleave="startAutoPlay()"
 >
   <swiper v-cloak ref="mySwiper" :options="swiperOptions" @slideChangeTransitionEnd="slideChangeTransitionEnd">
     
+      
+        
+        
+          
+          <swiper-slide>
+            <div class="item swiper-lazy" data-background="/medias/1.jpg" style=" background-size: 90000px; 
+            background-position: center center;">
+              <div class="flag">
+                <div class="img-mask swiper-lazy" data-background="/medias/1.jpg" style="height: 100%; background-size: cover; 
+                  background-position: center center;">
+                  <div class="swiper-lazy-preloader swiper-lazy-preloader-white"></div>  
+                </div>
+                <div class="flag-text">
+                  <div>
+                    <div class="title ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">JS作用域</div>
+                    <div class="excerpt ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s">作用域
+定义作用域的定义：一段程序代码中所用到的变量并不总是可用的，而限定这个变量的可用性的代码范围就是这个变量的作用域。通俗的讲，程序的作用域决定了一个变量在哪个地方能用，在哪个地方不能用。
+具体讲述关于作用域，我们就一个具体的函数来讲述</div>
+                  </div>
+                  <div class="ani animated" swiper-animate-effect="fadeInDown" swiper-animate-duration="0.2s" swiper-animate-delay="0.1s"><a href="/2021/01/05/zyy/" class="read-more border-color bg-color" style="display: inline-block; z-index:1;">阅读更多</a></div>
+                </div>
+              </div>
+            </div>
+
+          </swiper-slide>
+        
       
         
         
@@ -238,9 +264,9 @@
           </swiper-slide>
         
       
-    <div class="swiper-pagination" slot="pagination" style="display: none;"></div>
-    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style="display: none;"></div>
-    <div class="swiper-button-next swiper-button-white" slot="button-next" style="display: none;"></div>
+    <div class="swiper-pagination" slot="pagination" style=""></div>
+    <div class="swiper-button-prev swiper-button-white" slot="button-prev" style=""></div>
+    <div class="swiper-button-next swiper-button-white" slot="button-next" style=""></div>
     
   </swiper>
 </div>
@@ -490,6 +516,27 @@
 	<div class="articles">
 		
 			
+				<div class="article-link">
+					
+					<div class="article lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+						background-position: center center;">
+					</div>
+					<div class="text">
+						<div class="text-main">
+							<div class="title"><a href="/2021/01/05/zyy/">JS作用域</a></div>
+							<div class="content">
+								作用域
+定义作用域的定义：一段程序代码中所用到的变量并不总是可用的，而限定这个变量的可用性的代码范围就是这个变量的作用域
+							</div>
+						</div>
+						<a href="/2021/01/05/zyy/" class="more">
+							<i class="fa fa-eye" aria-hidden="true"></i>阅读更多
+						</a>
+					</div>
+				</div>
+			
+		
+			
 		
 	</div>
 </div>
@@ -500,6 +547,58 @@
 <section class="posts">
   
     <article class="post" data-aos="fade-up" style="flex-direction: row-reverse;">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-01-05</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/01/05/zyy/">JS作用域</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              
+            </div>
+            <div class="post-categories">
+              
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/JavaScript/">JavaScript</a>
+</div>
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              
+              <a href="/2021/01/05/zyy/" class="lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            作用域
+定义作用域的定义：一段程序代码中所用到的变量并不总是可用的，而限定这个变量的可用性的代码范围就是这个变量的作用域。通俗的讲，程序的作用域决定了一个变量在哪个地方能用，在哪个地方不能用。
+具体讲述关于作用域，我们就一个具体的函数来讲述
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/01/05/zyy/">
+            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/01/05/zyy/" class="lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+  
+    <article class="post" data-aos="fade-up" style="">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -537,7 +636,7 @@
         </div>
         <div class="post-more">
           <a href="/2021/01/02/JS/">
-            <i class="iconfont iconmore" style="float: right;" title="阅读更多"></i>
+            <i class="iconfont iconmore" style="" title="阅读更多"></i>
           </a>
         </div>
       </div>
